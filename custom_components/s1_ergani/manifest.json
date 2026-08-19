@@ -1,14 +1,14 @@
 {
     "domain": "s1_ergani",
     "name": "S1 Ergani",
-    "version": "0.1.0",
-    "documentation": "https://github.com/vagelisdermos/s1_ergani",
-    "issue_tracker": "https://github.com/vagelisdermos/s1_ergani/issues",
     "codeowners": [
         "@vagelisdermos"
     ],
     "config_flow": true,
+    "documentation": "https://github.com/vagelisdermos/s1_ergani",
     "integration_type": "service",
+    "issue_tracker": "https://github.com/vagelisdermos/s1_ergani/issues",
     "iot_class": "cloud_polling",
-    "requirements": []
+    "requirements": [],
+    "version": "0.1.1"
 }
