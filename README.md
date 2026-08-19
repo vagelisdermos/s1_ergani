@@ -24,7 +24,7 @@ The integration allows Home Assistant to perform employee check-in and check-out
 * Home Assistant
 * A valid SoftOne S1 Ergani account
 * S1 Ergani API access
-* Your company's AFM
+* Your AFM
 * Internet access from the Home Assistant host
 
 ## Installation
