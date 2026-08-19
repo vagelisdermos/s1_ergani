@@ -100,7 +100,7 @@ The integration provides the following settings:
 | **Server**    | S1/SoftOne server name, for example `hrmdev`           |
 | **Username**  | S1 account username                                    |
 | **Password**  | S1 account password                                    |
-| **AFM**       | Company's AFM                                          |
+| **AFM**       | Your AFM                                          |
 | **Device ID** | Unique identifier for this Home Assistant installation |
 
 ### Device ID
