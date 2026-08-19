@@ -1,0 +1,35 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "S1 Ergani",
+                "description": "Enter your S1 Ergani connection details.",
+                "data": {
+                    "server": "Server",
+                    "username": "Username",
+                    "password": "Password",
+                    "afm": "AFM",
+                    "device_id": "Device ID"
+                }
+            },
+            "reconfigure": {
+                "title": "Reconfigure S1 Ergani",
+                "description": "Update your S1 Ergani connection details.",
+                "data": {
+                    "server": "Server",
+                    "username": "Username",
+                    "password": "Password",
+                    "afm": "AFM",
+                    "device_id": "Device ID"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Unable to connect or authentication failed.",
+            "unknown": "An unexpected error occurred."
+        },
+        "abort": {
+            "already_configured": "This S1 Ergani server is already configured."
+        }
+    }
+}

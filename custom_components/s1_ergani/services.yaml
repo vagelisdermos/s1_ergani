@@ -1,0 +1,7 @@
+check_in:
+  name: Check In
+  description: Perform an Ergani check-in.
+
+check_out:
+  name: Check Out
+  description: Perform an Ergani check-out.
