@@ -3,6 +3,7 @@
     "name": "S1 Ergani",
     "version": "0.1.0",
     "documentation": "https://github.com/vagelisdermos/s1_ergani",
+    "issue_tracker": "https://github.com/vagelisdermos/s1_ergani/issues",
     "codeowners": [
         "@vagelisdermos"
     ],
