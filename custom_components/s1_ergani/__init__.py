@@ -6,6 +6,7 @@ from uuid import uuid4
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.exceptions import HomeAssistantError
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import S1ErganiApi, S1ErganiApiError
@@ -22,6 +23,8 @@ from .const import (
 )
 
 _LOGGER = logging.getLogger(__name__)
+
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
 def _generate_device_id() -> str:
@@ -198,7 +201,10 @@ async def async_unload_entry(
 ) -> bool:
     """Unload S1 Ergani config entry."""
 
-    hass.data[DOMAIN].pop(entry.entry_id, None)
+    hass.data[DOMAIN].pop(
+        entry.entry_id,
+        None,
+    )
 
     hass.data[DOMAIN].pop(
         f"{entry.entry_id}_last_result",
