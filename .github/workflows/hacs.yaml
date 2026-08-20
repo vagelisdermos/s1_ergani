@@ -3,11 +3,16 @@ name: HACS Validation
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 3 * * *"   # ημερήσιος έλεγχος για upstream regressions
+
+permissions:
+  contents: read          # least privilege
 
 jobs:
   hacs:
+    name: HACS validation
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,3 +21,5 @@ jobs:
         uses: hacs/action@main
         with:
           category: integration
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
