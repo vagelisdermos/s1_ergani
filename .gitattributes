@@ -1,0 +1,10 @@
+# Κανονικοποίηση σε LF μέσα στο repo — αποφυγή ψευδών diffs μεταξύ OS
+* text=auto eol=lf
+
+# Binary assets: καμία απολύτως μετατροπή
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.gif  binary
+*.zip  binary
