@@ -29,7 +29,30 @@
             "unknown": "An unexpected error occurred."
         },
         "abort": {
-            "already_configured": "This S1 Ergani server is already configured."
+            "already_configured": "This S1 Ergani server is already configured.",
+            "reconfigure_successful": "Reconfiguration was successful."
+        }
+    },
+    "services": {
+        "check_in": {
+            "name": "Check in",
+            "description": "Registers an employee arrival (ΕΡΓΑΝΗ card entry).",
+            "fields": {
+                "employee_afm": {
+                    "name": "Employee AFM",
+                    "description": "The tax identification number of the employee."
+                }
+            }
+        },
+        "check_out": {
+            "name": "Check out",
+            "description": "Registers an employee departure (ΕΡΓΑΝΗ card exit).",
+            "fields": {
+                "employee_afm": {
+                    "name": "Employee AFM",
+                    "description": "The tax identification number of the employee."
+                }
+            }
         }
     }
 }
