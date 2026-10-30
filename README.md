@@ -145,13 +145,8 @@ https://api.ipify.org/
 
 The public IP is **not requested from the user** and is not displayed as a configuration field.
 
-If the public IP cannot be detected, the integration uses:
-
-```text
-192.168.1.1
-```
-
-as a fallback value.
+If the public IP cannot be detected, the action fails with an error and no
+check-in or check-out request is submitted.
 
 The IP address sent to S1 Ergani is the public IP used by the Home Assistant host to access the Internet.
 
@@ -344,11 +339,8 @@ The integration logs the check request and the response returned by S1 Ergani.
 
 The integration attempts to obtain the public IP through `api.ipify.org`.
 
-If the request fails, the configured fallback value is used:
-
-```text
-192.168.1.1
-```
+If the request fails, the action reports an error and does not submit the
+check-in or check-out request.
 
 ## Security
 

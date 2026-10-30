@@ -58,7 +58,7 @@ async def async_setup(
                 "S1 Ergani is not loaded."
             )
 
-        _LOGGER.warning(
+        _LOGGER.info(
             "S1 Ergani: CHECK-IN requested"
         )
 
@@ -78,7 +78,7 @@ async def async_setup(
             f"{entry.entry_id}_last_result"
         ] = result
 
-        _LOGGER.warning(
+        _LOGGER.info(
             "S1 Ergani CHECK-IN successful: %s",
             result,
         )
@@ -101,7 +101,7 @@ async def async_setup(
                 "S1 Ergani is not loaded."
             )
 
-        _LOGGER.warning(
+        _LOGGER.info(
             "S1 Ergani: CHECK-OUT requested"
         )
 
@@ -121,7 +121,7 @@ async def async_setup(
             f"{entry.entry_id}_last_result"
         ] = result
 
-        _LOGGER.warning(
+        _LOGGER.info(
             "S1 Ergani CHECK-OUT successful: %s",
             result,
         )

@@ -8,7 +8,6 @@ from homeassistant.util import dt as dt_util
 
 from .const import (
     APP_ID,
-    PUBLIC_IP_FALLBACK,
     PUBLIC_IP_URL,
     SOTYPE_CHECK_IN,
     SOTYPE_CHECK_OUT,
@@ -89,14 +88,13 @@ class S1ErganiApi:
             return str(public_ip)
 
         except Exception as err:
-            _LOGGER.warning(
-                "S1 Ergani: unable to determine public IP: %s. "
-                "Using fallback IP %s",
+            _LOGGER.error(
+                "S1 Ergani: unable to determine public IP: %s",
                 err,
-                PUBLIC_IP_FALLBACK,
             )
-
-            return PUBLIC_IP_FALLBACK
+            raise S1ErganiApiError(
+                f"Unable to determine public IP: {err}"
+            ) from err
 
     async def login(self) -> dict:
         """Perform login."""

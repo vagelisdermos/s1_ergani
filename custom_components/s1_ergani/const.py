@@ -18,4 +18,3 @@ SERVICE_CHECK_IN = "check_in"
 SERVICE_CHECK_OUT = "check_out"
 
 PUBLIC_IP_URL = "https://api.ipify.org?format=json"
-PUBLIC_IP_FALLBACK = "192.168.1.1"
