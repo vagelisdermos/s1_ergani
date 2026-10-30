@@ -71,6 +71,11 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     ):
         """Handle the initial setup."""
 
+        # This integration uses a single account for its services.
+        # Do not allow a second config entry, even for another server.
+        if self.hass.config_entries.async_entries(DOMAIN):
+            return self.async_abort(reason="already_configured")
+
         errors: dict[str, str] = {}
 
         if user_input is not None:
